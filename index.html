@@ -1,132 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanatan Mandir Tiffin Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanatan Mandir Tiffin Service</title>
 
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f7f7f7;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 600px;
-      background: #ffffff;
-      padding: 25px;
-      margin: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      text-align: center;
-      color: #b45309;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-
-    input, textarea, select, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    .inline-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 5px;
-    }
-
-    .inline-options label {
-      font-weight: normal;
-    }
-
-    button {
-      background-color: #b45309;
-      color: white;
-      border: none;
-      margin-top: 25px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #92400e;
-    }
-
-    .note {
-      font-size: 12px;
-      color: #555;
-      margin-top: 10px;
-      text-align: center;
-    }
-  </style>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    padding: 20px;
+  }
+  .container {
+    max-width: 800px;
+    background: white;
+    margin: auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #b45309;
+  }
+  h2 {
+    margin-top: 25px;
+    color: #92400e;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  .menu-item {
+    font-weight: normal;
+    margin-left: 15px;
+  }
+  button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px;
+    background: #b45309;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #92400e;
+  }
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Sanatan Mandir<br/>Tiffin Service Order</h1>
+<div class="container">
+<h1>Sanatan Mandir Tiffin Service Order</h1>
 
-    <form action="https://formspree.io/f/xeeeqjrn" method="POST">
+<form action="https://formspree.io/f/xeeeqjrn" method="POST">
 
-      <label>Full Name *</label>
-      <input type="text" name="name" required />
+<label>Full Name *</label>
+<input type="text" name="name" required>
 
-      <label>Phone Number *</label>
-      <input type="tel" name="phone" required />
+<label>Phone *</label>
+<input type="tel" name="phone" required>
 
-      <label>Email Address *</label>
-      <input type="email" name="email" required />
+<label>Email *</label>
+<input type="email" name="email" required>
 
-      <label>Tiffin Type *</label>
-      <select name="tiffin_type" required>
-        <option value="">-- Select --</option>
-        <option value="Regular">Regular</option>
-        <option value="Jain">Jain</option>
-        <option value="Special">Special</option>
-      </select>
+<!-- MONDAY -->
+<h2>Monday</h2>
+<label class="menu-item">
+<input type="checkbox" name="Monday[]" value="Bhaji (per lb) $7">
+ Bhaji (per lb) – $7
+</label>
+<label class="menu-item">
+<input type="checkbox" name="Monday[]" value="Tava Pulav (per lb) $7">
+ Tava Pulav (per lb) – $7
+</label>
 
-      <label>Days Required *</label>
-      <div class="inline-options">
-        <label><input type="checkbox" name="days[]" value="Monday"> Mon</label>
-        <label><input type="checkbox" name="days[]" value="Tuesday"> Tue</label>
-        <label><input type="checkbox" name="days[]" value="Wednesday"> Wed</label>
-        <label><input type="checkbox" name="days[]" value="Thursday"> Thu</label>
-        <label><input type="checkbox" name="days[]" value="Friday"> Fri</label>
-        <label><input type="checkbox" name="days[]" value="Saturday"> Sat</label>
-      </div>
+<!-- TUESDAY -->
+<h2>Tuesday</h2>
+<label class="menu-item">
+<input type="checkbox" name="Tuesday[]" value="Chole $7">
+ Chole – $7
+</label>
+<label class="menu-item">
+<input type="checkbox" name="Tuesday[]" value="Puri (per piece) $0.50">
+ Puri (per piece) – $0.50
+</label>
 
-      <label>Pickup Time</label>
-      <input type="time" name="pickup_time" />
+<!-- WEDNESDAY -->
+<h2>Wednesday</h2>
+<label class="menu-item">
+<input type="checkbox" name="Wednesday[]" value="Tadka Dal (per lb) $7">
+ Tadka Dal (per lb) – $7
+</label>
+<label class="menu-item">
+<input type="checkbox" name="Wednesday[]" value="Potato Shaak (per lb) $7">
+ Potato Shaak (per lb) – $7
+</label>
+<label class="menu-item">
+<input type="checkbox" name="Wednesday[]" value="Paratha (per piece) $1">
+ Paratha (per piece) – $1
+</label>
 
-      <label>Additional Notes</label>
-      <textarea name="notes" rows="4" placeholder="Any special instructions..."></textarea>
+<!-- THURSDAY -->
+<h2>Thursday</h2>
+<label class="menu-item">
+<input type="checkbox" name="Thursday[]" value="Daal Dhokli $7">
+ Daal Dhokli – $7
+</label>
+<label class="menu-item">
+<input type="checkbox" name="Thursday[]" value="Masala Bhakri (per piece) $1">
+ Masala Bhakri (per piece) – $1
+</label>
 
-      <!-- Optional redirect after submission -->
-      <!--
-      <input type="hidden" name="_next" value="https://yourusername.github.io/thank-you.html">
-      -->
+<!-- FRIDAY -->
+<h2>Friday</h2>
+<label class="menu-item">
+<input type="checkbox" name="Friday[]" value="Sambhar $7">
+ Sambhar – $7
+</label>
+<label class="menu-item">
+<input type="checkbox" name="Friday[]" value="Idli (per piece) $1">
+ Idli (per piece) – $1
+</label>
 
-      <button type="submit">Place Order</button>
+<label>Additional Notes</label>
+<textarea name="notes" rows="4"></textarea>
 
-    </form>
+<button type="submit">Submit Order</button>
 
-    <p class="note">
-      You will receive a confirmation once your order is submitted.
-    </p>
-  </div>
+</form>
+</div>
 
 </body>
 </html>
